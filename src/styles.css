@@ -142,7 +142,7 @@ body {
 .conversation {
   height: calc(100% - 12px);
   position: relative;
-  background: #efe7dd url('background.jpg') repeat;
+  background: #efe7dd url('./assets/background.jpg') repeat;
   z-index: 0;
 }
 
