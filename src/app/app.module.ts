@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -12,6 +13,7 @@ import { ChatListComponent } from './chat-list/chat-list.component';
   imports: [
     BrowserModule,
     FormsModule,
+    FlexLayoutModule,
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,

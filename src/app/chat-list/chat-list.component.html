@@ -1,5 +1,8 @@
-<mat-toolbar class="chat chat-container user-bar"
-  >
+<mat-toolbar
+  class="chat chat-container user-bar"
+  fxLayout="row"
+  fxLayoutAlign="space-around center"
+>
   <button
     mat-icon-button
     aria-label="Example icon button with a vertical three dot icon"
@@ -16,10 +19,20 @@
     <span>PapaSa</span>
     <span class="status">online</span>
   </div>
+  <span fxFlex></span>
 
-  <div class="actions">
-    <i class="zmdi zmdi-phone"></i>
-  </div>
+  <button
+    mat-icon-button
+    aria-label="Example icon button with a vertical three dot icon"
+  >
+    <mat-icon>video_call</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    aria-label="Example icon button with a vertical three dot icon"
+  >
+    <mat-icon>call</mat-icon>
+  </button>
   <button
     mat-icon-button
     aria-label="Example icon button with a vertical three dot icon"
