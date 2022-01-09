@@ -69,13 +69,8 @@ body {
 mat-toolbar {
   background: #005e54;
   color: #fff;
-
+  height: 56px;
   font-size: 24px;
-}
-
-mat-toolbar .actions {
-  float: right;
-  margin: 0 0 0 20px;
 }
 
 mat-toolbar .avatar {
@@ -134,7 +129,6 @@ mat-toolbar .status {
 }
 
 .conversation .conversation-container {
-  height: calc(100% - 68px);
   box-shadow: inset 0 10px 10px -10px #000000;
   overflow-x: hidden;
   padding: 0 16px;
