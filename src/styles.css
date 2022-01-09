@@ -98,9 +98,8 @@ mat-toolbar .status {
 /* Conversation */
 
 .conversation {
-  height: calc(100% - 12px);
   position: relative;
-  background: #efe7dd url('./assets/background.jpg') repeat;
+
   z-index: 0;
 }
 
@@ -215,6 +214,7 @@ mat-toolbar .status {
   background: #fff;
   border-radius: 0px 5px 5px 5px;
   float: left;
+  left: 10px;
 }
 
 .message.received .metadata {
@@ -232,6 +232,7 @@ mat-toolbar .status {
   background: #e1ffc7;
   border-radius: 5px 0px 5px 5px;
   float: right;
+  right: 10px;
 }
 
 .message.sent:after {

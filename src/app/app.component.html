@@ -3,7 +3,7 @@
 <div class="volume"></div>
 <div class="camera"></div>
 
-<mat-sidenav-container>
+<mat-sidenav-container fullscreen>
   <mat-sidenav-content fxLayout="column">
     <div class="status-bar">
       <div class="time"></div>
@@ -59,7 +59,10 @@
       </button>
     </mat-toolbar>
 
-    <app-chat-list fxFlex></app-chat-list>
+    <app-chat-list
+      fxFlex
+      class="conversation conversation-container"
+    ></app-chat-list>
 
     <form
       class="conversation-compose"
