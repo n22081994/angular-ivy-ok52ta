@@ -22,6 +22,44 @@
             <i class="zmdi zmdi-star"></i>
           </div>
         </div>
+        <mat-toolbar fxLayout="row" fxLayoutAlign="space-around center">
+          <button
+            mat-icon-button
+            aria-label="Example icon button with a vertical three dot icon"
+          >
+            <mat-icon>arrow_back</mat-icon>
+          </button>
+          <div class="avatar">
+            <img
+              src="https://avatars2.githubusercontent.com/u/398893?s=128"
+              alt="Avatar"
+            />
+          </div>
+          <div class="name">
+            <span>PapaSa</span>
+            <span class="status">online</span>
+          </div>
+          <span fxFlex></span>
+
+          <button
+            mat-icon-button
+            aria-label="Example icon button with a vertical three dot icon"
+          >
+            <mat-icon>video_call</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            aria-label="Example icon button with a vertical three dot icon"
+          >
+            <mat-icon>call</mat-icon>
+          </button>
+          <button
+            mat-icon-button
+            aria-label="Example icon button with a vertical three dot icon"
+          >
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </mat-toolbar>
         <app-chat-list></app-chat-list>
 
         <form class="conversation-compose">
