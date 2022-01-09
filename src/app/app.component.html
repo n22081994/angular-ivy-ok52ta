@@ -89,12 +89,13 @@
       </div>
       <input
         class="input-msg"
+        [(ngModel)]="msg"
         name="input"
         placeholder="Message"
         autocomplete="off"
         autofocus
       />
-      <button mat-icon-button aria-label="attachment">
+      <button mat-icon-button aria-label="attachment" (click)="receive()">
         <mat-icon>attachment</mat-icon>
       </button>
 

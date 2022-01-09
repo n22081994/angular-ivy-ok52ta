@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Chat } from '../message';
 import { MessageService } from '../message.service';
 
@@ -9,9 +9,9 @@ import { MessageService } from '../message.service';
   styleUrls: ['./chat-list.component.css'],
 })
 export class ChatListComponent implements OnInit {
-  chats: BehaviorSubject<Chat[]> = [];
+  chats$: Observable<Chat[]>;
   constructor(private chatService: MessageService) {
-    this.chats = this.chatService.getChats();
+    this.chats$ = this.chatService.getChats();
   }
 
   ngOnInit() {}

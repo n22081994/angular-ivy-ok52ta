@@ -1,4 +1,4 @@
-<ng-container *ngFor="let chat of chats">
+<ng-container *ngFor="let chat of chats$ | async">
   <ng-container *ngIf="chat.me">
     <div class="message sent">
       {{ chat.text }}

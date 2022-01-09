@@ -6,10 +6,10 @@ import { Chat } from './message';
   providedIn: 'root',
 })
 export class MessageService {
-  chats = new BehaviorSubject([] as Chat[]);
-
+  private _chatsSubject = new BehaviorSubject([] as Chat[]);
+  private chats$ = this._chatsSubject.asObservable();
   constructor() {
-    this.chats.next([
+    this._chatsSubject.next([
       { me: true, text: 'What happened last night?', time: '7:47 AM' },
       { me: false, text: 'You were drunk.', time: '7:48 AM' },
       { me: true, text: "No I wasn't.", time: '7:48 AM' },
@@ -22,10 +22,10 @@ export class MessageService {
   }
 
   getChats() {
-    return this.chats;
+    return this.chats$;
   }
 
   send(chat: Chat) {
-    this.chats.next([...this.chats.getValue(), chat]);
+    this._chatsSubject.next([...this._chatsSubject.getValue(), chat]);
   }
 }
