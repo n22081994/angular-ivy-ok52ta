@@ -18,8 +18,8 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-image: url('./assets/background.jpg') repeat;
-  background: #efe7dd;
+  background-color: #efe7dd;
+  background-image: url('./assets/background.jpg');
 }
 
 .page {
