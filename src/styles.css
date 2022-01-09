@@ -263,7 +263,7 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
+
   border-radius: 5px 0 0 5px;
   flex: 0 0 auto;
   margin-left: 8px;
@@ -340,6 +340,10 @@ form {
   justify-content: center;
 }
 
+form {
+  background-color: white;
+}
+
 .conversation-compose .send .circle i {
   font-size: 24px;
   margin-left: 5px;
@@ -347,6 +351,10 @@ form {
 
 .mat-icon-button {
   background-color: transparent;
+}
+
+mat-toolbar .mat-icon-button {
+  color: white;
 }
 
 /* Small Screens */
@@ -367,7 +375,7 @@ form {
   }
 
   .marvel-device {
-    visibility: hidden;
+    display: none;
   }
 
   .marvel-device .status-bar {
