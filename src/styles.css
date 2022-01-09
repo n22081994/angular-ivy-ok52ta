@@ -64,52 +64,34 @@ body {
 
 /* Chat */
 
-.chat {
-  height: calc(100% - 69px);
-}
-
-.chat-container {
-  height: 100%;
-}
-
 /* User Bar */
 
-.user-bar {
+mat-toolbar {
   background: #005e54;
   color: #fff;
 
   font-size: 24px;
 }
 
-.user-bar:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.user-bar .actions {
+mat-toolbar .actions {
   float: right;
   margin: 0 0 0 20px;
 }
 
-.user-bar .actions.more {
-  margin: 0 12px 0 32px;
-}
-
-.user-bar .avatar {
+mat-toolbar .avatar {
   margin: 0 0 0 5px;
   width: 36px;
   height: 36px;
 }
 
-.user-bar .avatar img {
+mat-toolbar .avatar img {
   border-radius: 50%;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
   display: block;
   width: 100%;
 }
 
-.user-bar .name {
+mat-toolbar .name {
   font-size: 17px;
   font-weight: 600;
   text-overflow: ellipsis;
@@ -120,7 +102,7 @@ body {
   width: 110px;
 }
 
-.user-bar .status {
+mat-toolbar .status {
   display: block;
   font-size: 13px;
   font-weight: 400;
