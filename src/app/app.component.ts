@@ -1,4 +1,4 @@
-import { Component, VERSION } from '@angular/core';
+import { Component } from '@angular/core';
 import { MessageService } from './message.service';
 
 @Component({
@@ -10,20 +10,22 @@ export class AppComponent {
   msg = '';
   constructor(private chatService: MessageService) {}
   send() {
-    this.chatService.send({
-      me: true,
-      text: this.msg,
-      time: this.formatAMPM(),
-    });
+    if (this.msg !== '')
+      this.chatService.send({
+        me: true,
+        text: this.msg,
+        time: this.formatAMPM(),
+      });
     this.msg = '';
   }
 
   receive() {
-    this.chatService.send({
-      me: false,
-      text: this.msg,
-      time: this.formatAMPM(),
-    });
+    if (this.msg !== '')
+      this.chatService.send({
+        me: false,
+        text: this.msg,
+        time: this.formatAMPM(),
+      });
     this.msg = '';
   }
 
