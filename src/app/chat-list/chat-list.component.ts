@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Message {
-  me: boolean;
-  text: string;
-}
+import { Chat } from '../message';
 
 @Component({
   selector: 'app-chat-list',
@@ -11,7 +7,7 @@ interface Message {
   styleUrls: ['./chat-list.component.css'],
 })
 export class ChatListComponent implements OnInit {
-  chats: Message[] = [
+  chats: Chat[] = [
     { me: true, text: 'What happened last night?' },
     { me: false, text: 'You were drunk.' },
     { me: true, text: "No I wasn't." },
