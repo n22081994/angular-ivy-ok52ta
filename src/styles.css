@@ -38,6 +38,7 @@ body {
   color: #fff;
   font-size: 14px;
   padding: 0 8px;
+  width: 100%;
 }
 
 .status-bar:after {
@@ -69,7 +70,6 @@ mat-toolbar {
 }
 
 mat-toolbar .avatar {
-  margin: 0 0 0 5px;
   width: 36px;
   height: 36px;
 }
@@ -259,7 +259,6 @@ form {
 
 .conversation-compose div,
 .conversation-compose input {
-  background: #fff;
   height: 100%;
 }
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MessageService } from './message.service';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'my-app',
@@ -8,28 +9,34 @@ import { MessageService } from './message.service';
 })
 export class AppComponent {
   msg = '';
-  constructor(private chatService: MessageService) {}
+  time = this.getTime(true);
+  source = timer(1000);
+  constructor(private chatService: MessageService) {
+    const subscribe = this.source.subscribe(
+      (val) => (this.time = this.getTime(false))
+    );
+  }
+
   send() {
-    if (this.msg !== '')
-      this.chatService.send({
-        me: true,
-        text: this.msg,
-        time: this.formatAMPM(),
-      });
-    this.msg = '';
+    this.addMsg(true);
   }
 
   receive() {
-    if (this.msg !== '')
-      this.chatService.send({
-        me: false,
-        text: this.msg,
-        time: this.formatAMPM(),
-      });
-    this.msg = '';
+    this.addMsg(false);
   }
 
-  formatAMPM() {
+  addMsg(myMsg: boolean) {
+    if (this.msg !== '') {
+      this.chatService.send({
+        me: myMsg,
+        text: this.msg,
+        time: this.getTime(true),
+      });
+      this.msg = '';
+    }
+  }
+
+  getTime(withAMPM: boolean) {
     const date = new Date();
     var hours = date.getHours();
     let minutes = date.getMinutes();
@@ -37,7 +44,6 @@ export class AppComponent {
     hours = hours % 12;
     hours = hours ? hours : 12; // the hour '0' should be '12'
     const min = minutes < 10 ? '0' + minutes : minutes;
-    var strTime = hours + ':' + min + ' ' + ampm;
-    return strTime;
+    return withAMPM ? hours + ':' + min : hours + ':' + min + ' ' + ampm;
   }
 }

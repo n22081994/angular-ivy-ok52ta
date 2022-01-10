@@ -5,3 +5,41 @@ mat-sidenav-container {
   left: 0;
   right: 0;
 }
+
+app-chat-list {
+  width: 100%;
+}
+
+form {
+  background-color: transparent;
+  width: 98%;
+  margin-bottom: 8px;
+}
+
+.form {
+  border-radius: 30px;
+  background-color: white;
+  height: 100%;
+  margin-right: 8px;
+}
+
+.microphone {
+  background-color: rgb(0, 128, 105);
+  color: white;
+}
+
+.gray-icon {
+  color: rgb(125, 132, 137);
+}
+
+.status-bar > mat-icon {
+  font-size: 16px;
+  height: 16px;
+  width: 16px;
+  margin-top: 4px;
+}
+
+.status-bar > .time {
+  font-size: 12px;
+  margin-top: 4px;
+}
